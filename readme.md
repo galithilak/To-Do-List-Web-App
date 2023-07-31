@@ -28,51 +28,63 @@ Search and filtering: Enable users to search for tasks or filter tasks based on 
 Learning Opportunities:
 This project will give you hands-on experience with building a basic backend API, handling data storage with a database, and connecting the frontend to the backend using HTTP requests. Additionally, you'll get familiar with concepts like CRUD operations, routing, and working with data in a web application.
 
-Sure! Below is a basic file structure for the "To-Do List Web App" project using Node.js with Express as the backend and a simple frontend without any frontend framework:
+If you want to build the "To-Do List Web App" project using Django as the backend framework, the file structure might look something like this:
+
 ```
 todo-list-app/
 ├── backend/
-│   ├── node_modules/
-│   ├── controllers/
-│   │   └── taskController.js
-│   ├── models/
-│   │   └── Task.js
-│   ├── routes/
-│   │   └── taskRoutes.js
-│   ├── app.js
-│   ├── package.json
-│   └── package-lock.json
-├── frontend/
-│   ├── index.html
-│   ├── css/
-│   │   └── styles.css
-│   └── js/
-│       └── script.js
+│   ├── manage.py
+│   ├── todo_list/
+│   │   ├── __init__.py
+│   │   ├── settings.py
+│   │   ├── urls.py
+│   │   └── wsgi.py
+│   ├── tasks/
+│   │   ├── migrations/
+│   │   ├── __init__.py
+│   │   ├── admin.py
+│   │   ├── apps.py
+│   │   ├── models.py
+│   │   ├── tests.py
+│   │   └── views.py
+│   └── templates/
+│       ├── base.html
+│       └── task_list.html
 └── database/
-    └── database.sqlite
+    └── db.sqlite3
 ```
 Explanation:
 
-backend/: This directory contains all the backend code using Node.js and Express.
+backend/: This directory contains all the backend code using Django.
 
-node_modules/: This is where all the dependencies of the backend will be installed when you run npm install.
+manage.py: Django's command-line utility for administrative tasks.
 
-controllers/: This directory contains the controllers for the tasks. These controllers will handle the logic for creating, reading, updating, and deleting tasks.
+todo_list/: This is the main Django project directory.
 
-models/: This directory contains the Task model, which represents the data structure of a task and will be used to interact with the database.
+__init__.py: This file marks the directory as a Python package.
 
-routes/: This directory contains the taskRoutes, which define the API routes for handling CRUD operations on tasks.
+settings.py: Django project settings and configurations.
 
-app.js: This is the main file of the backend, where you set up the Express app, middleware, and API routes.
+urls.py: Project-level URL configurations.
 
-package.json and package-lock.json: These files keep track of the project's dependencies and metadata.
+wsgi.py: WSGI application entry point.
 
-frontend/: This directory contains the frontend code using HTML, CSS, and JavaScript.
+tasks/: This is the Django app directory that handles the tasks related functionality.
 
-index.html: The main HTML file for the application.
+migrations/: This directory contains database migration files.
 
-css/: This directory contains the styles for the application.
+__init__.py: This file marks the directory as a Python package.
 
-js/: This directory contains the JavaScript code.
+admin.py: Django admin configurations for the tasks app.
+
+apps.py: App configuration.
+
+models.py: The models for tasks, where you define the data structure for a task.
+
+tests.py: Unit tests for the tasks app.
+
+views.py: The views for the tasks app, where you define the logic for creating, reading, updating, and deleting tasks.
+
+templates/: This directory contains the HTML templates for the frontend views.
 
 database/: This directory contains the SQLite database file where the tasks will be stored.
